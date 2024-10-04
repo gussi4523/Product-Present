@@ -1,0 +1,262 @@
+body{
+    background-image: linear-gradient(
+        217deg,
+        rgb(255 0 0 / 80%),
+        rgb(255 0 0 / 0%) 70.71%
+      ),
+      linear-gradient(127deg, rgb(0 255 0 / 80%), rgb(0 255 0 / 0%) 70.71%),
+      linear-gradient(336deg, rgb(0 0 255 / 80%), rgb(0 0 255 / 0%) 70.71%);
+}
+
+@property --long-line-title{
+    syntax: "<length>";
+    inherits: true;
+    initial-value: 0px;
+}
+
+.title{
+    position: relative;
+    color: #d1d1d1;
+    font-size: 160px;
+
+    width: 510px;
+    left: 40%;
+}
+
+.title::before{
+    content: "";
+    width: 500px;
+    background-image: linear-gradient(to bottom right,#888888,#d1d1d1,#F0F0F0);
+    height: 32px;
+    position: absolute;
+    left:0;
+    top:90%;
+
+    border-radius: 10px;
+}
+
+.title::after{
+    content: "";
+    width: var(--long-line-title);
+    background-image: linear-gradient(to bottom right,#ffba08,#faa307,#e85d04);
+    height: 32px;
+    position: absolute;
+    left:0;
+    top:90%;
+
+    border-radius: 10px;
+    transition: width 1s;
+}
+
+.title:hover::after{
+    width: 500px;
+}
+
+.product-card{
+
+    display: flex;
+
+    width: 10%;
+    height: 800px;
+    
+    position: relative;
+    left: 48%;
+
+    background-image: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px  0 rgba(0, 0, 0, 0.37);
+    z-index: 1;
+
+    transition: width 2s,left 2s,height 2s;
+}
+
+.product-card:hover{
+    width: 50%;
+    height: auto    ;
+    position: relative;
+    left: 25%;
+}
+
+.product-card:hover .descrp{
+    opacity: 255;
+}
+
+.product-card:hover .product-img{
+    opacity: 100px;
+}
+
+.texs{
+    background-image: linear-gradient(to bottom right,#08c5ff,#0b07fa,#a704e8);
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    
+    z-index: -1;
+    top: 800px;
+    left: 50%;
+}
+
+.product-img{
+    background-image: url("img/ANYEOPocketDMG-Black.webp");
+    background-size:600px;
+
+    /*color: ;*/
+    width: 600px;
+    height: 600px;
+}
+
+.descrp{
+    background-image: linear-gradient(135deg,rgba(113, 98, 138, 0.1),rgba(141, 87, 132, 0.233));
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 8px 32px  0 rgba(0, 0, 0, 0.37);
+    z-index: 1;
+
+
+    width: 65%;
+    height: 100%;
+    opacity: 0;
+
+    transition: opacity 1s;
+}
+
+.des-text{
+    font-family: 'Gotham Pro black';
+}
+
+.li-clap{
+    height: 400px;
+}
+
+.product-card:hover .li-texs{
+    height: auto;
+}
+
+.under-li{
+    position: absolute;
+    top:0px;
+}
+
+.product-card:hover .under-li{
+    position: relative;
+}
+
+.li-texs{
+
+    height: 0px;
+    background-clip: text;
+
+    clip: ul;
+
+    transition: height 2s;
+}
+
+@keyframes gradient_go{
+    0%{
+        background-position-x: 0px;
+    }
+    50%{
+        background-position-x: 50px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+.product-name{
+
+    /*visibility: hidden;*/
+    position: relative;
+    left: 0px;
+    display: block;
+    color: rgb(22, 22, 22);
+
+    height: 100px;
+
+    transition: color 1s;
+}
+
+.inputs{
+    background-image: linear-gradient(90deg,#FFF9D0,#CAF4FF,#A0DEFF,#5AB2FF);
+
+    width: 100%;
+
+    
+}
+
+.product-color-card{
+
+    position: relative;
+
+    top: 25%;
+
+    width: 100%;
+}
+
+.btn-black{
+
+    border: 0px;
+    position: relative;
+
+    border-radius: 50%;
+
+    accent-color: rgb(236, 236, 236);
+
+    left: 0%;
+
+    top: 25%;
+
+    padding: 5px;
+
+    width: 30px;
+    height: 30px;
+}
+
+.btn-white{
+    
+    border-radius: 50%;
+
+    border: 0px;
+    position: relative;
+
+    background-color: white;
+
+    left: 0%;
+
+    top: 25%;
+
+    padding: 5px;
+
+    width: 30px;
+    height: 30px;
+}
+
+
+.btn{
+    background-image: linear-gradient(90deg,#D2FF72,#73EC8B,#54C392,#15B392);
+
+    height: 80px;
+}
+
+.btn-buy{
+    position: relative;
+
+    border-radius: 10px;
+
+    bottom: 5px;
+
+    top : 10px;
+
+    border: 0px;
+
+    background-image: linear-gradient();
+
+    width: 80%;
+    left: 10%;
+    height: 55px;
+}
